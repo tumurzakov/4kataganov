@@ -1,0 +1,12 @@
+version: '3'
+services:
+
+  node:
+    image: "node:15.14.0-alpine3.10"
+    environment:
+      - NODE_ENV=production
+    ports:
+      - "5050:3000"
+    volumes:
+      - "./:/srv/sources"
+    command: /srv/sources/start.sh
